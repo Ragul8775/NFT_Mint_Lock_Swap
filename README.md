@@ -8,13 +8,17 @@ This project is a Solana program using Anchor that enables users to mint NFTs, l
 2. **Vault System**: Lock NFTs in a vault.
 3. **Swap NFTs**: Swap NFTs for SOL.
 
+## Architecture Diagram
+
+![Architecture Diagram](/image.png)
+
 ## Instructions
 
 ### Mint NFT
 
 Mint a new NFT with the provided metadata.
 
-```rust
+````rust
 pub fn init_nft(
     ctx: Context<InitNFT>,
     name: String,
@@ -23,7 +27,7 @@ pub fn init_nft(
 ) -> Result<()> {
     // Implementation
 }
-```
+
 
 ### Create Vault
 
@@ -33,7 +37,7 @@ Create a new vault to store NFTs.
 pub fn create_vault(ctx: Context<CreateVault>, nft_mint: Pubkey) -> Result<()> {
     // Implementation
 }
-```
+````
 
 ### Lock NFT
 
@@ -136,3 +140,5 @@ pub fn execute_swap(ctx: Context<ExecuteSwap>) -> Result<()> {
    ```sh
    yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts
    ```
+
+   `
